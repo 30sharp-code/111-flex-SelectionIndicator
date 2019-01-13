@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--www.30Sharp.com - Persian Developers resource-->
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" 
+  layout="absolute" 
+  
+  horizontalScrollPolicy="off"
+  verticalScrollPolicy="off" xmlns:local="*" viewSourceURL="srcview/index.html">
+  <mx:ArrayCollection id="images">
+    <mx:source>
+      <mx:Array>
+        <mx:Object source="@Embed('Flex.png')"/>
+        <mx:Object source="@Embed('30Sharp.png')"/>
+        <mx:Object source="@Embed('Flash.png')"/>        
+      </mx:Array>
+    </mx:source>
+  </mx:ArrayCollection>
+  <mx:Box width="100%" height="100%"
+    horizontalAlign="center"
+    verticalAlign="middle">
+    <mx:Label text=" WWW.30SHARP.COM " fontWeight="bold" fontSize="18" fontFamily="Verdana" textDecoration="underline"/>
+    <local:TileListEx dataProvider="{images}"
+      itemRenderer="MyItemRenderer" 
+      columnWidth="80" 
+      rowHeight="80"
+      width="250"
+      height="120"
+      backgroundAlpha="0"
+      borderStyle="none" 
+      useRollOver="false"/>
+  </mx:Box>
+</mx:Application>
